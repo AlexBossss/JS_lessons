@@ -9,19 +9,44 @@
     
 </body>
 <script>
-        var a =1;
-            b = "hello";
-            c = true;
-            d = null;
-            e = undefined;
-            console.log(a + " " + typeof(a));
-            console.log(b + " " + typeof(b));
-            console.log(c + " " + typeof(c));
-            console.log(d + " " + typeof(d));
-            console.log(e + " " + typeof(e));
+
+
+
+        var a = prompt("insert number 1");
+        var b = prompt("insert number 2");
+        var a = Number(a);
+        var b = Number(b);
         
-        var num  = prompt("insert number");
-        var num2 =num*num;
-        alert("your number is " + num2);
+
+        if (String(a) == "NaN" || String(b) == "NaN") {
+            alert("mistake");
+        } else if (a == "" || b == "") {
+            alert("Enter both numbers");
+        } else if (a == b) {
+            alert("equel");
+        } else if (a > b) {
+            alert(a);
+        } else {
+            alert(b);
+        }
+
+
+        
+        var a = prompt("insert letter 1");
+        var b = prompt("insert letter 2");
+        var a = String(a);
+        var b = String(b);
+        if ((a == Number(a) || b == Number(b)) && a!=="" && b!=="" ){
+            alert("mistake");
+        } else if (a == "" || b == ""){
+            alert("Enter both letters");
+        } else if (a>b){
+            alert(b);
+        } else if (a.length >1){
+            alert("Enter only one letter");
+        }
+        else {
+            alert(a);
+        }
 </script>
 </html>
