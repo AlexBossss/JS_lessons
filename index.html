@@ -11,42 +11,85 @@
 <script>
 
 
+//progrm 1
 
-        var a = prompt("insert number 1");
-        var b = prompt("insert number 2");
-        var a = Number(a);
-        var b = Number(b);
-        
-
-        if (String(a) == "NaN" || String(b) == "NaN") {
-            alert("mistake");
-        } else if (a == "" || b == "") {
-            alert("Enter both numbers");
-        } else if (a == b) {
-            alert("equel");
-        } else if (a > b) {
-            alert(a);
-        } else {
-            alert(b);
-        }
+var user = {};
+user.name = prompt("Enter user name");
+user.age = prompt("Enter user age");
+user.age = Number(user.age);
+while(String(user.age) == "NaN"){
+    alert("Enter age in numbers");
+    user.age = prompt("Enter user age");
+    user.age = Number(user.age);
+}
+console.log(user);
 
 
-        
-        var a = prompt("insert letter 1");
-        var b = prompt("insert letter 2");
-        var a = String(a);
-        var b = String(b);
-        if ((a == Number(a) || b == Number(b)) && a!=="" && b!=="" ){
-            alert("mistake");
-        } else if (a == "" || b == ""){
-            alert("Enter both letters");
-        } else if (a>b){
-            alert(b);
-        } else if (a.length >1){
-            alert("Enter only one letter");
-        }
-        else {
-            alert(a);
-        }
+// program 2 (for)
+var arr = [];
+for (var i = 0; i<5; i++){
+    arr[i] = prompt("insert number");
+    arr[i] = Number(arr[i]);
+    while (String(arr[i]) == "NaN"){
+        alert("insert only numebr");
+        arr[i] = prompt("insert number");
+        arr[i] = Number(arr[i]);
+    }
+}
+for ( var j = 4; j >= 0; j--){
+    console.log(arr[j]);
+}
+
+// program  2 (whiel)
+
+var arr = [];
+var i = 0;
+while (i < 5) {
+    arr[i] = prompt("Insert number");
+    arr[i] = Number(arr[i]);
+    while (String(arr[i]) == "NaN"){
+        arr[i] = prompt("Please insert a number");
+        arr[i] = Number(arr[i]);
+    }
+    i++;
+}
+
+var j = 4;
+while (j>=0) {
+    console.log(arr[j]);
+    j--;
+}
+
+// program 3
+var shop = {};
+shop.name = prompt("Enter shop name");
+while (String(shop.name) == ""){
+    shop.name = prompt("Enter shop name");
+    shop.name = String(shop.name);
+}
+
+
+
+var j = prompt("Amount of goods");
+j = Number(j);
+while (String(j) == "NaN"){
+    var j = prompt("Amount of goods in numbers");
+    j = Number(j);
+}
+shop.goods = [];
+
+for (var i = 0; i < j; i ++){
+    shop.goods[i] = {};
+    shop.goods[i].name = prompt("Enter name of a good");
+
+    shop.goods[i].prise = prompt("Enter prise");
+    shop.goods[i].prise = Number(shop.goods[i].prise);
+    while (String(shop.goods[i].prise)== "NaN"){
+        shop.goods[i].prise = prompt("Enter prise in numbers");
+        shop.goods[i].prise = Number(shop.goods[i].prise);
+    }
+}
+console.log(shop);
+
 </script>
 </html>
